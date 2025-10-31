@@ -13,12 +13,28 @@
 
 ---
 
+
+## 📸 Résultats et Visualisations
+
+### 🔹 Prototype Réel du Parking
+![Parking Prototype](./images/parking_prototype.png)
+
+
+### 🔹 Application Web — Tableau de Bord
+![App Screenshot](images/visualisation_places.png)
+
+![Visualisation Places](images/parking_prototype2.png)
+
+### 🔹 Prototype de détection de gaz
+
+![détection de gaz](images/détection_de_gaz.png)
+---
+
 ## 📖 Table des Matières
 - [🎯 Aperçu du Projet](#-aperçu-du-projet)
 - [🚀 Fonctionnalités](#-fonctionnalités)
 - [🛠️ Technologies Utilisées](#️-technologies-utilisées)
 - [🏗️ Architecture du Système](#️-architecture-du-système)
-- [📦 Installation](#-installation)
 - [🎮 Utilisation](#-utilisation)
 - [🔧 Configuration](#-configuration)
 - [👥 Auteur](#-auteur)
@@ -122,36 +138,10 @@ MySQL 5.7+
 
 Node-RED
 
-🧩 Étapes d’Installation
-1️⃣ Cloner le dépôt
-git clone https://github.com/votre-utilisateur/smart-parking-iot.git
-cd smart-parking-iot
 
-2️⃣ Configuration de la base de données
-CREATE DATABASE smart_parking;
-USE smart_parking;
-SOURCE database/schema.sql;
 
-3️⃣ Configuration Arduino
-
-Ouvrir arduino/smart_parking.ino dans Arduino IDE
-
-Configurer les pins selon le montage
-
-Téléverser sur la carte Arduino
-
-4️⃣ Déploiement de l’application web
-mvn clean install
-cp target/smartparking.war $TOMCAT_HOME/webapps/
-
-5️⃣ Configuration Node-RED
-
-Importer node-red/smart-parking-flow.json
-
-Configurer les connexions MQTT/HTTP
-
-🎮 Utilisation
-👤 Utilisateur
+## 🎮 Utilisation
+## 👤 Utilisateur
 
 Accéder à l’application : http://localhost:8080/smartparking
 
@@ -162,41 +152,6 @@ Consulter les places disponibles
 Réserver une place libre
 
 Stationner et visualiser les alertes en temps réel
-
-🛠️ Administrateur
-
-Suivre l’état du parking en temps réel
-
-Gérer les réservations
-
-Recevoir les alertes de sécurité
-
-Analyser les statistiques d’utilisation
-
-🔧 Configuration
-⚙️ Fichier database.properties
-db.url=jdbc:mysql://localhost:3306/smart_parking
-db.username=your_username
-db.password=your_password
-
-⚙️ Fichier arduino.properties
-arduino.port=COM3
-arduino.baudrate=9600
-
-⚙️ Fichier email.properties
-email.host=smtp.gmail.com
-email.port=587
-email.username=your_email@gmail.com
-email.password=your_password
-
-⚡ Configuration des Pins Arduino
-const int trigPin = 9;
-const int echoPin = 10;
-const int gasSensor = A0;
-const int redLed = 2;
-const int greenLed = 3;
-const int blueLed = 4;
-const int buzzer = 5;
 
 👥 Auteur
 
