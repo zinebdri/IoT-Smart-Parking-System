@@ -96,7 +96,8 @@ graph TD
     E --> F[Base de Données MySQL]
     F --> G[Application Web]
     G --> H[Utilisateur Final]
-📋 Description des Couches
+
+## 📋 Description des Couches
 
 Couche Capteurs → collecte de données en temps réel
 
@@ -107,9 +108,10 @@ Couche Données → stockage dans MySQL
 Couche Application → interface web utilisateur
 
 Couche Sécurité → authentification & système d’alerte
+---
 
-📦 Installation
-⚙️ Prérequis
+##  📦 Installation
+### ⚙️ Prérequis
 
 Arduino IDE 1.8.x ou supérieur
 
