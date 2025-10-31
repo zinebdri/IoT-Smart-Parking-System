@@ -87,7 +87,6 @@ Grâce à une **application web intuitive**, les utilisateurs peuvent consulter 
 
 ## 🏗️ Architecture du Système
 
-```mermaid
 graph TD
     A[Capteurs Ultrason] --> B[Arduino Uno]
     C[Capteur Gaz MQ-2] --> B
