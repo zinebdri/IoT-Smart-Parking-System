@@ -1,0 +1,41 @@
+# Eclipse/IDE
+.classpath
+.project
+.settings/
+bin/
+.idea/
+.vscode/
+
+# Build/Compilation
+build/
+target/
+*.class
+*.war
+*.jar
+
+# Système
+.DS_Store
+Thumbs.db
+*.log
+
+# Configuration sensible
+*.properties
+.env
+
+# Base de données (fichiers locaux)
+*.db
+*.sqlite
+
+# Arduino
+app/
+*.elf
+*.hex
+
+# Node.js (si utilisé)
+node_modules/
+npm-debug.log*
+
+# Exceptions
+!*.template
+!README.md
+!LICENSE
