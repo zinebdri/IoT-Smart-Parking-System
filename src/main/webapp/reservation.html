@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR" class="no-js scheme_default">
+
+<head>
+	<title>Service parking &#8211; Smart Parking </title>
+		<meta charset="UTF-8">
+		<meta name="" content="">
+		<link rel="" href="http://gmpg.org/xfn/11">
+		<link rel="" href="https://www.parking-aeroport.be/xmlrpc.php">
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Parking 42 &raquo; Flux" href="https://www.parking-aeroport.be/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Parking 42 &raquo; Flux des commentaires" href="https://www.parking-aeroport.be/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.parking-aeroport.be\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.20"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.parking-aeroport.be/wp-includes/css/dist/block-library/style.min.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://www.parking-aeroport.be/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.4' type='text/css' media='all' />
+<link rel='stylesheet' id='essential-grid-plugin-settings-css'  href='https://www.parking-aeroport.be/wp-content/plugins/essential-grid/public/assets/css/settings.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tp-fontello-css'  href='https://www.parking-aeroport.be/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=2.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://www.parking-aeroport.be/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.1.1' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='simple-banner-style-css'  href='https://www.parking-aeroport.be/wp-content/plugins/simple-banner/simple-banner.css?ver=2.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='trx_addons-icons-css'  href='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/css/font-icons/css/trx_addons_icons-embedded.css' type='text/css' media='all' />
+<link rel='stylesheet' id='swiperslider-css'  href='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/js/swiper/swiper.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/js/magnific/magnific-popup.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='trx_addons-css'  href='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/css/trx_addons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='ewd-ufaq-style-css'  href='https://www.parking-aeroport.be/wp-content/plugins/ultimate-faqs/css/ewd-ufaq-styles.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='ewd-ufaq-rrssb-css'  href='https://www.parking-aeroport.be/wp-content/plugins/ultimate-faqs/css/rrssb-min.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/style.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='dtpicker-css'  href='https://www.parking-aeroport.be/wp-content/plugins/date-time-picker-field/assets/js/vendor/datetimepicker/jquery.datetimepicker.min.css?ver=5.2.20' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='vc_lte_ie9-css'  href='https://www.parking-aeroport.be/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css?ver=6.0.5' type='text/css' media='screen' />
+<![endif]-->
+<link rel='stylesheet' id='js_composer_front-css'  href='//www.parking-aeroport.be/wp-content/uploads/js_composer/js_composer_front_custom.css?ver=6.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css'  href='//www.parking-aeroport.be/wp-content/uploads/pum/pum-site-styles.css?generated=1712501368&#038;ver=1.10.2' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-smoothness-css'  href='https://www.parking-aeroport.be/wp-content/plugins/contact-form-7/includes/js/jquery-ui/themes/smoothness/jquery-ui.min.css?ver=1.11.4' type='text/css' media='screen' />
+<link rel='stylesheet' id='wpgdprc.css-css'  href='https://www.parking-aeroport.be/wp-content/plugins/wp-gdpr-compliance/assets/css/front.css?ver=1571306099' type='text/css' media='all' />
+<style id='wpgdprc.css-inline-css' type='text/css'>
+
+            div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:before { content: 'Yes'; }
+            div.wpgdprc .wpgdprc-switch .wpgdprc-switch-inner:after { content: 'No'; }
+        
+</style>
+<link rel='stylesheet' id='getcab-font-google_fonts-css'  href='https://fonts.googleapis.com/css?family=Dosis%3A400%2C500%2C600%2C700%2C800%7CLato%3A300%2C400%7CRaleway%3A400%2C600%2C700%2C900&#038;subset=latin%2Clatin-ext&#038;ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='fontello-style-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab-child/css/fontello/css/fontello-embedded.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='getcab-main-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='getcab-child-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab-child/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='getcab-animation-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/css/animation.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='getcab-colors-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/css/__colors.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='getcab-styles-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/css/__styles.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css'  href='https://www.parking-aeroport.be/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.6-78496d1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://www.parking-aeroport.be/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.2.20' type='text/css' media='all' />
+<link rel='stylesheet' id='getcab-responsive-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/css/responsive.css?ver=5.2.20' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/revslider/public/assets/js/revolution.tools.min.js?ver=6.0'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.1.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var scriptParams = {"simple_banner_text":"Nous vous rappelons que l\u2019annulation est GRATUITE.","pro_version_enabled":"","in_array":"","debug_mode":"","id":"1104","disabled_pages_array":[""],"simple_banner_color":"#272727","simple_banner_text_color":"","simple_banner_link_color":"","simple_banner_custom_css":"","site_custom_css":"","site_custom_js":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/simple-banner/simple-banner.js?ver=2.2.3'></script>
+<script type='text/javascript'>
+var mejsL10n = {"language":"fr","strings":{"mejs.install-flash":"Vous utilisez un navigateur qui n\u2019a pas le lecteur Flash activ\u00e9 ou install\u00e9. Veuillez activer votre extension Flash ou t\u00e9l\u00e9charger la derni\u00e8re version \u00e0 partir de cette adresse\u00a0: https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Quitter le plein \u00e9cran","mejs.fullscreen-on":"Passer en plein \u00e9cran","mejs.download-video":"T\u00e9l\u00e9charger la vid\u00e9o","mejs.fullscreen":"Plein \u00e9cran","mejs.time-jump-forward":["Saut en avant d\u20191 seconde","Avancer de %1 secondes"],"mejs.loop":"Lire en boucle","mejs.play":"Lecture","mejs.pause":"Pause","mejs.close":"Fermer","mejs.time-slider":"Curseur de temps","mejs.time-help-text":"Utilisez les fl\u00e8ches droite\/gauche pour avancer d\u2019une seconde, haut\/bas pour avancer de dix secondes.","mejs.time-skip-back":["Revenir une seconde en arri\u00e8re","Saut en arri\u00e8re de %1 seconde(s)"],"mejs.captions-subtitles":"L\u00e9gendes\/Sous-titres","mejs.captions-chapters":"Chapitres","mejs.none":"Aucun","mejs.mute-toggle":"Couper le son","mejs.volume-help-text":"Utilisez les fl\u00e8ches haut\/bas pour augmenter ou diminuer le volume.","mejs.unmute":"R\u00e9activer le son","mejs.mute":"Muet","mejs.volume-slider":"Curseur de volume","mejs.video-player":"Lecteur vid\u00e9o","mejs.audio-player":"Lecteur audio","mejs.ad-skip":"Passer la publicit\u00e9","mejs.ad-skip-info":["Passer dans %1 seconde","Passer dans %1 secondes"],"mejs.source-chooser":"S\u00e9lecteur de source","mejs.stop":"Arr\u00eater","mejs.speed-rate":"Taux de vitesse","mejs.live-broadcast":"\u00c9mission en direct","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanais","mejs.arabic":"Arabe","mejs.belarusian":"Bi\u00e9lorusse","mejs.bulgarian":"Bulgare","mejs.catalan":"Catalan","mejs.chinese":"Chinois","mejs.chinese-simplified":"Chinois (simplifi\u00e9)","mejs.chinese-traditional":"Chinois (traditionnel)","mejs.croatian":"Croate","mejs.czech":"Tch\u00e8que","mejs.danish":"Danois","mejs.dutch":"N\u00e9erlandais","mejs.english":"Anglais","mejs.estonian":"Estonien","mejs.filipino":"Filipino","mejs.finnish":"Terminer","mejs.french":"Fran\u00e7ais","mejs.galician":"Galicien","mejs.german":"Allemand","mejs.greek":"Grec","mejs.haitian-creole":"Cr\u00e9ole ha\u00eftien","mejs.hebrew":"H\u00e9breu","mejs.hindi":"Hindi","mejs.hungarian":"Hongrois","mejs.icelandic":"Islandais","mejs.indonesian":"Indon\u00e9sien","mejs.irish":"Irlandais","mejs.italian":"Italien","mejs.japanese":"Japonais","mejs.korean":"Cor\u00e9en","mejs.latvian":"Letton","mejs.lithuanian":"Lituanien","mejs.macedonian":"Mac\u00e9donien","mejs.malay":"Malais","mejs.maltese":"Maltais","mejs.norwegian":"Norv\u00e9gien","mejs.persian":"Perse","mejs.polish":"Polonais","mejs.portuguese":"Portugais","mejs.romanian":"Roumain","mejs.russian":"Russe","mejs.serbian":"Serbe","mejs.slovak":"Slovaque","mejs.slovenian":"Slov\u00e9nien","mejs.spanish":"Espagnol","mejs.swahili":"Swahili","mejs.swedish":"Su\u00e9dois","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turc","mejs.ukrainian":"Ukrainien","mejs.vietnamese":"Vietnamien","mejs.welsh":"Ga\u00e9lique","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=5.2.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<link rel='https://api.w.org/' href='https://www.parking-aeroport.be/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.parking-aeroport.be/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.parking-aeroport.be/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.2.20" />
+<link rel="canonical" href="https://www.parking-aeroport.be/parking-42-charleroi/" />
+<link rel='shortlink' href='https://www.parking-aeroport.be/?p=1104' />
+<link rel="alternate" type="application/json+oembed" href="https://www.parking-aeroport.be/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.parking-aeroport.be%2Fparking-42-charleroi%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.parking-aeroport.be/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.parking-aeroport.be%2Fparking-42-charleroi%2F&#038;format=xml" />
+<link rel="alternate" href="https://www.parking-aeroport.be/parking-42-charleroi/" hreflang="x-default" /><style type="text/css" media="screen">.simple-banner{background:#272727}</style><style type="text/css" media="screen">.simple-banner .simple-banner-text{color: #ffffff;}</style><style type="text/css" media="screen">.simple-banner .simple-banner-text a{color:#f16521;}</style>    <script type="text/javascript">
+        var ajaxurl = 'https://www.parking-aeroport.be/wp-admin/admin-ajax.php';
+    </script>
+
+
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/wp-content/themes/getcab-child/favicon/parking42/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/getcab-child/favicon/parking42/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/getcab-child/favicon/parking42/favicon-16x16.png">
+        <link rel="manifest" href="/wp-content/themes/getcab-child/favicon/parking42/site.webmanifest">
+        <link rel="mask-icon" href="/wp-content/themes/getcab-child/favicon/parking42/safari-pinned-tab.svg" color="#81bc41">
+        <meta name="msapplication-TileColor" content="#272727">
+        <meta name="theme-color" content="#ffffff">
+
+
+
+
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 6.1.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(a){try{var b,c=document.getElementById(a.c).parentNode.offsetWidth;if(c=0===c||isNaN(c)?window.innerWidth:c,a.tabw=void 0===a.tabw?0:parseInt(a.tabw),a.thumbw=void 0===a.thumbw?0:parseInt(a.thumbw),a.tabh=void 0===a.tabh?0:parseInt(a.tabh),a.thumbh=void 0===a.thumbh?0:parseInt(a.thumbh),a.tabhide=void 0===a.tabhide?0:parseInt(a.tabhide),a.thumbhide=void 0===a.thumbhide?0:parseInt(a.thumbhide),a.mh=void 0===a.mh||""==a.mh?0:a.mh,"fullscreen"===a.layout||"fullscreen"===a.l)b=Math.max(a.mh,window.innerHeight);else{for(var d in a.gw=Array.isArray(a.gw)?a.gw:[a.gw],a.rl)(void 0===a.gw[d]||0===a.gw[d])&&(a.gw[d]=a.gw[d-1]);for(var d in a.gh=void 0===a.el||""===a.el||Array.isArray(a.el)&&0==a.el.length?a.gh:a.el,a.gh=Array.isArray(a.gh)?a.gh:[a.gh],a.rl)(void 0===a.gh[d]||0===a.gh[d])&&(a.gh[d]=a.gh[d-1]);var e,f=Array(a.rl.length),g=0;for(var d in a.tabw=a.tabhide>=c?0:a.tabw,a.thumbw=a.thumbhide>=c?0:a.thumbw,a.tabh=a.tabhide>=c?0:a.tabh,a.thumbh=a.thumbhide>=c?0:a.thumbh,a.rl)f[d]=a.rl[d]<window.innerWidth?0:a.rl[d];for(var d in e=f[0],f)e>f[d]&&0<f[d]&&(e=f[d],g=d);var h=c>a.gw[g]+a.tabw+a.thumbw?1:(c-(a.tabw+a.thumbw))/a.gw[g];b=a.gh[g]*h+(a.tabh+a.thumbh)}void 0===window.rs_init_css&&(window.rs_init_css=document.head.appendChild(document.createElement("style"))),document.getElementById(a.c).height=b,window.rs_init_css.innerHTML+="#"+a.c+"_wrapper { height: "+b+"px }"}catch(a){console.log("Failure at Presize of Slider:"+a)}};</script>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+	
+
+	<!--Analytics-->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-24406272-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script');
+			ga.type = 'text/javascript';
+			ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</head>
+
+<body class="page-template-default page page-id-1104 multiple-domain-www-parking-aeroport-be blog_mode_page body_tag body_style_wide scheme_default is_single sidebar_hide expand_content remove_margins header_style_header-default header_position_default header_title_on menu_style_top no_layout wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
+
+	
+	
+	<div class="body_wrap">
+
+		<div class="page_wrap">
+
+			
+
+<div class="menu_mobile_overlay"></div>
+<div class="menu_mobile ">
+	<div class="menu_mobile_inner">
+		<a class="logo" href="https://www.parking-aeroport.be/"><img src="https://www.parking-aeroport.be/wp-content/uploads/2019/11/Parking-42-logo-2.png" alt="" class="logo_main "  width="240" height="170"></a><nav class="menu_mobile_nav_area"><ul id="menu_mobile" class="menu_mobile_nav"><li id="menu_mobile-item-1116" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1116"><a href="https://www.parking-aeroport.be/"><span>Accueil</span></a></li><li id="menu_mobile-item-1115" class="reserver-parking-link menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1104 current_page_item menu-item-1115"><a href="https://www.parking-aeroport.be/parking-42-charleroi/" aria-current="page"><span>Service parking</span></a></li><li id="menu_mobile-item-1114" class="navette-parking-link menu-item menu-item-type-post_type menu-item-object-page menu-item-1114"><a href="https://www.navette42.be/navette-aeroport/"><span>Service navette</span></a></li><li id="menu_mobile-item-1360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="https://www.parking-aeroport.be/vos-avis/"><span>Vos Avis</span></a></li><li id="menu_mobile-item-1113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1113"><a href="https://www.parking-aeroport.be/qui-sommes-nous/"><span>Qui sommes-nous ?</span></a></li><li id="menu_mobile-item-1408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1408"><a href="https://www.parking-aeroport.be/faq/"><span>FAQ</span></a></li></ul></nav><div class="socials_mobile"><span class="social_item"><a href="https://fr-fr.facebook.com/pages/category/Parking-Garage---Lot/Parking-42-318636018306689/" target="_blank" class="social_icons social_facebook"><span class="trx_addons_icon-facebook"></span></a></span></div>		<a class="menu_mobile_close icon-cancel"></a>
+	</div>
+</div>
+			<div class="page_content_wrap scheme_default">
+
+									<div class="content_wrap">
+					
+					
+					<div class="content">
+						
+<article id="post-1104" class="post_item_single post_type_page post-1104 page type-page status-publish hentry">
+
+	
+	<div class="post_content entry-content">
+		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space  height_medium"   style="height: 32px"><span class="vc_empty_space_inner"></span></div><div id="sc_title_2012423681"
+		class="sc_title sc_title_default reservation_title"><h6 class="sc_item_subtitle sc_title_subtitle sc_align_center sc_item_title_style_default"></h6><h2 class="sc_item_title sc_title_title sc_align_center sc_item_title_style_default">Réservez votre place de parking </h2></div><!-- /.sc_title --><div class="vc_empty_space  height_medium"   style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element " >
+		<div class="wpb_wrapper">
+			<div role="form" class="wpcf7" id="wpcf7-f1251-p1104-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"></div>
+<form action="/parking-42-charleroi?arrivee=10-05-2024&#038;retour=10-05-2024#wpcf7-f1251-p1104-o1" method="post" class="wpcf7-form" novalidate="novalidate" id="reservation-form">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="1251" />
+<input type="hidden" name="_wpcf7_version" value="5.1.4" />
+<input type="hidden" name="_wpcf7_locale" value="en_US" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1251-p1104-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="1104" />
+</div>
+<div class="container-fluid reservation-page">
+<div class="row reservation-row reservation-grey-section">
+<div class="col-12">
+<div class="row">
+<div class="col-12 mb-3 mt-3">
+<div class="reservation-section-title">Vos coordonnées</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 col-sm-6 mb-3 ">
+<label>Nom, Prénom*</label><br />
+<span class="wpcf7-form-control-wrap nom"><input type="text" name="nom" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required staytuned" aria-required="true" aria-invalid="false" required></span></p>
+</div>
+<div class="col-12 col-sm-6 mb-3 ">
+<label>Email*</label><br />
+<span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email staytuned" aria-required="true" aria-invalid="false" required></span>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 col-sm-6 mb-3 ">
+<label>Numéro de téléphone*</label><br />
+<span class="wpcf7-form-control-wrap telephone"><input type="tel" name="telephone" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-required wpcf7-validates-as-number staytuned" aria-required="true" aria-invalid="false" required></span>
+</div>
+<div class="col-12 col-sm-6 mb-3">
+<label>Localité et code postal*</label><br />
+<span class="wpcf7-form-control-wrap cp"><input type="text" name="cp" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required staytuned" aria-required="true" aria-invalid="false" required></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row reservation-row reservation-grey-section">
+<div class="col-12">
+<div class="row">
+<div class="col-12 mb-3 mt-3">
+<div class="reservation-section-title">Description véhicule</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 col-sm-4 mb-3 ">
+<label>Marque et modèle*</label><br />
+<span class="wpcf7-form-control-wrap marque"><input type="text" name="marque" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required staytuned" aria-required="true" aria-invalid="false" required></span>
+</div>
+<div class="col-12 col-sm-4 mb-3 ">
+<label>N° d'immatriculation*</label><br />
+<span class="wpcf7-form-control-wrap immatriculation"><input type="text" name="immatriculation" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required staytuned" aria-required="true" aria-invalid="false" required></span>
+</div>
+<div class="col-12 col-sm-4 mb-3 ">
+<label>Couleur*</label><br />
+<span class="wpcf7-form-control-wrap couleur"><input type="text" name="couleur" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required staytuned" aria-required="true" aria-invalid="false" required></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row reservation-row reservation-grey-section">
+<div class="col-12">
+<div class="row">
+<div class="col-12 mb-3 mt-3">
+<div class="reservation-section-title">Description</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 col-sm-6 mb-3  ">
+<label>Date d'arrivée*</label><br />
+<span class="wpcf7-form-control-wrap date-arrivee"><input type="date" name="date-arrivee" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-required wpcf7-validates-as-date" aria-required="true" aria-invalid="false" /></span>
+</div>
+<div class="col-12 col-sm-6 mb-3">
+<label>Heure d'arrivée au parking *</label><br />
+<input type="time" name="heure-arrivee" class="wpcf7-form-control wpcf7-text staytuned" size="40"required></p>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 col-sm-6 mb-3">
+<label>Date de retour*</label><br />
+<span class="wpcf7-form-control-wrap date-retour"><input type="date" name="date-retour" value="" class="wpcf7-form-control wpcf7-date wpcf7-validates-as-required wpcf7-validates-as-date" aria-required="true" aria-invalid="false" /></span>
+</div>
+<div class="col-12 col-sm-6 mb-3">
+<label>Heure de retour*</label><br />
+<input type="time" name="heure-vol-retour" class="wpcf7-form-control wpcf7-text staytuned" size="40" required></p>
+</div>
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 col-md-6 col-lg-3 mb-3 ">
+
+
+
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+
+
+</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 mb-3">
+<label class="textarea-label">Remarques et demandes spéciales</label><br />
+<span class="wpcf7-form-control-wrap remarques"><textarea name="remarques" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea staytuned" aria-invalid="false"></textarea></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row reservation-row">
+<div class="col-12 mb-5">* Champs requis</div>
+<div class="col-12 col-md-6 mb-3">
+<div class="p-3 reservation-recap">
+<div class="row">
+<div class="col-12">
+<div class="mb-3 recap-title">Récapitulatif:</div>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 mb-3">
+<div class="recap-item">Date d'arrivée: <span class="recap-date-arrivee recap-data data-container empty"></span></div>
+</div>
+<div class="col-12 mb-3">
+<div class="recap-item">Date de retour: <span class="recap-date-retour recap-data data-container empty"></span></div>
+</div>
+<div class="col-12 mb-3">
+<div class="recap-item">Nombre de jours: <span class="recap-nombre-jours recap-data data-container empty"></span></div>
+</div>
+<div class="col-12 mb-3">
+<div class="recap-item">Prix: <span class="recap-price-sans-frais recap-data data-container empty"></span></div>
+<div class="recap-item minus mt-2">Frais de dépose et reprise imposés par le parking: <span class="recap-transfert data-container">+ 3€ /passage</span></div>
+</div>
+</div>
+<div class="row">
+<div class="col-12 mb-3">
+<div class="recap-item">Total: <span class="recap-prix recap-data data-container empty"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12 mt-3 mb-3 fixed-font-16">
+<span class="wpcf7-form-control-wrap"><span class="wpcf7-form-control wpcf7-checkbox optin-checkbox-container"><span class="wpcf7-list-item first last"><input type="checkbox" name="opt-in" value="true" style="min-height:15px;min-width:15px;" required><span class="wpcf7-list-item-label">Vos données personnelles seront utilisées exclusivement pour le traitement de votre réservation. En cochant cette case, vous marquez votre accord avec notre <a href="/politique-de-confidentialite/">Politique de confidentialité</a> et nos <a href="/conditions-generales/" style="margin-top:0; display:inline;">conditions générales</a>.</span></span></span></span>
+</div>
+<div class="col-12 mt-3 mb-3 fixed-font-16">
+<span class="wpcf7-form-control-wrap"><span class="wpcf7-form-control wpcf7-checkbox memoriser-checkbox-container"><span class="wpcf7-list-item first last"><input type="checkbox" name="use_cookie" value="true" style="min-height:15px;min-width:15px;"><span class="wpcf7-list-item-label">Mémoriser mes <span class="new-info">nouvelles</span> informations pour une prochaine demande</a>.</span></span></span></span>
+</div>
+<div class="col-12 mt-3 mb-3 fixed-font-16">
+<span class="wpcf7-form-control-wrap"><span class="wpcf7-form-control wpcf7-checkbox remove-cookie-container"><span class="wpcf7-list-item first last"><input type="checkbox" name="remove_cookie" value="true" style="min-height:15px;min-width:15px;"><span class="wpcf7-list-item-label">Ne plus se souvenir de mes informations.</a></span></span></span></span>
+</div>
+<div class="col-12 mt-3 mb-3 fixed-font-16">
+<span class="wpcf7-form-control-wrap"><span class="wpcf7-form-control wpcf7-checkbox optin-checkbox-container"><span class="wpcf7-list-item first last"><input type="checkbox" name="opt-in" value="true" style="min-height:15px;min-width:15px;" required><span class="wpcf7-list-item-label" style="color: #bc4141;">Je consulterai régulièrement mes SPAMS car les emails de Parking  peuvent s'y retrouver</span></span></span></span>
+</div>
+<div class="col-12">
+<div class="row">
+<div class="col-12 mt-5 mx-auto reservation-submit" style="max-width:540px;">
+<input type="submit" value="RESERVER PARKING AVEC SERVICE VOITURIER" class="wpcf7-form-control wpcf7-submit" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><!-- Modal --></p>
+<div class="modal fade" id="modal-message" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title"></h5>
+<p>        <button type="button" class="close close-btn close-modal-up"><span aria-hidden="true">&times;</span></button>
+      </div>
+<div class="modal-body"></div>
+<div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-btn close-modal-down">Fermer</button>
+      </div></div></div>
+</div>
+<p><!-- Modal Help--></p>
+<div class="modal fade  " id="modal-help" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Grille des préfixes des numéros de retour</h5>
+<p>        <button type="button" class="close close-btn close-modal-up"><span aria-hidden="true">&times;</span></button>
+      </div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 mb-2">
+            Ryanair : <span class="modal-help-bold">FR</span>
+          </div>
+<div class="col-12 mb-2">
+            Tuifly    : <span class="modal-help-bold">TB</span>
+          </div>
+<div class="col-12 mb-2">
+            Wizz Air : <span class="modal-help-bold">W6</span>
+          </div>
+<div class="col-12 mb-2">
+            Pegasus Airlines : <span class="modal-help-bold">PC</span>
+          </div>
+<div class="col-12 mb-2">
+            Air Algérie : <span class="modal-help-bold">AH</span>
+          </div>
+<div class="col-12 mb-2">
+            Air Corsica : <span class="modal-help-bold">XK</span>
+          </div>
+<div class="col-12 mb-2">
+            Air Belgium : <span class="modal-help-bold">KF</span>
+          </div>
+<div class="col-12 mb-2">
+            Belavia : <span class="modal-help-bold">B</span>
+          </div>
+<div class="col-12">
+            Laudamotion : <span class="modal-help-bold">OE</span>
+          </div></div></div>
+<div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-btn close-modal-down">Fermer</button>
+      </div></div></div>
+</div>
+<p><!-- Modal Fermeture --></p>
+<div class="modal fade  " id="modal-fermeture" tabindex="-1" role="dialog">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Réservation impossible</h5>
+<p>		  <button type="button" class="close close-btn close-modal-up"><span aria-hidden="true">&times;</span></button>
+		</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 mb-2">
+<p>Parking  sera fermé du 17 janvier au 28 janvier 2024 et par conséquent cette période est indisponible.</p>
+</p></div></div></div>
+<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary close-btn close-modal-down">Fermer</button>
+		</div></div></div></div>
+<input type='hidden' class='wpcf7-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' /><div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+
+		</div>
+	</div>
+<div class="vc_empty_space  height_medium"   style="height: 32px"><span class="vc_empty_space_inner"></span></div></div></div></div></div>
+	</div><!-- .entry-content -->
+
+</article>
+</div><!-- </.content> -->
+
+</div><!-- </.content_wrap> --></div><!-- </.page_content_wrap> -->
+
+
+<footer class="site_footer_wrap scheme_default">
+
+			<div class="footer_wrap widget_area">
+			<div class="footer_wrap_inner widget_area_inner">
+				<div class="content_wrap"><div class="columns_wrap"><aside id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><aside id="trx_addons_widget_contacts-7" class=" widget widget_contacts">
+
+		
+
+</footer><!-- /.site_footer_wrap -->
+
+</div><!-- /.page_wrap -->
+
+</div><!-- /.body_wrap -->
+
+		<script type="text/javascript">
+			var ajaxRevslider;
+			
+			jQuery(document).ready(function() {
+
+				
+				// CUSTOM AJAX CONTENT LOADING FUNCTION
+				ajaxRevslider = function(obj) {
+				
+					// obj.type : Post Type
+					// obj.id : ID of Content to Load
+					// obj.aspectratio : The Aspect Ratio of the Container / Media
+					// obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+					
+					var content	= '';
+					var data	= {
+						action:			'revslider_ajax_call_front',
+						client_action:	'get_slider_html',
+						token:			'9b5bd4b124',
+						type:			obj.type,
+						id:				obj.id,
+						aspectratio:	obj.aspectratio
+					};
+					
+					// SYNC AJAX REQUEST
+					jQuery.ajax({
+						type:		'post',
+						url:		'https://www.parking-aeroport.be/wp-admin/admin-ajax.php',
+						dataType:	'json',
+						data:		data,
+						async:		false,
+						success:	function(ret, textStatus, XMLHttpRequest) {
+							if(ret.success == true)
+								content = ret.data;								
+						},
+						error:		function(e) {
+							console.log(e);
+						}
+					});
+					
+					 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+					 return content;						 
+				};
+				
+				// CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+				var ajaxRemoveRevslider = function(obj) {
+					return jQuery(obj.selector + ' .rev_slider').revkill();
+				};
+
+
+				// EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION				
+				if (jQuery.fn.tpessential !== undefined) 					
+					if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') 
+						jQuery.fn.tpessential.defaults.ajaxTypes.push({type: 'revslider', func: ajaxRevslider, killfunc: ajaxRemoveRevslider, openAnimationSpeed: 0.3});   
+						// type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+						// func: the Function Name which is Called once the Item with the Post Type has been clicked
+						// killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+						// openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+					
+				
+				
+			});
+		</script>
+		<!-- Post/page views count increment -->
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		setTimeout(function() {
+			jQuery.post(TRX_ADDONS_STORAGE['ajax_url'], {
+				action: 'post_counter',
+				nonce: TRX_ADDONS_STORAGE['ajax_nonce'],
+				post_id: 1104,
+				views: 1
+			}).done(function(response) {
+				var rez = {};
+				try {
+					rez = JSON.parse(response);
+				} catch (e) {
+					rez = { error: TRX_ADDONS_STORAGE['ajax_error'] };
+					console.log(response);
+				}
+				if (rez.error === '') {
+					jQuery('.post_counters_single .post_counters_views .post_counters_number').html(rez.counter);
+				}
+			});
+		}, 10);
+	});
+</script><div id="pum-1871" class="pum pum-overlay pum-theme-1791 pum-theme-enterprise-blue popmake-overlay click_open" data-popmake="{&quot;id&quot;:1871,&quot;slug&quot;:&quot;sub-popup-voiturier-parking&quot;,&quot;theme_id&quot;:1791,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;extra_selectors&quot;:&quot;.info-voiturier&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-1871" class="pum-container popmake theme-1791 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content">
+			<p><strong><span class="parking-green">Smart Parking et son service voiturier</span></strong></p>
+<p><strong><span class="parking-green">1. Prise en charge</span></strong></p>
+<p>Nous vous attendons au parking de l&rsquo;, nous faisons un état des lieux de votre véhicule et vous aidons à décharger vos bagages.</p>
+<p><strong><span class="parking-green">2. Stationnement</span></strong></p>
+<p>Pendant toute la durée de votre séjour, votre véhicule sera stationné dans un parking couvert, sous surveillance et à proximité immédiate de l&rsquo;aéroport.</p>
+<p><strong><span class="parking-green">3. Restitution</span></strong></p>
+<p>Nous suivons votre vol en temps réel et amenons votre véhicule à l&rsquo; dès votre appel.</p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Fermer">
+			×            </button>
+		
+	</div>
+
+</div>
+<link rel='stylesheet' id='getcab-inline-styles-css'  href='https://www.parking-aeroport.be/wp-content/themes/getcab/css/__inline.css?ver=5.2.20' type='text/css' media='all' />
+<style id='getcab-inline-styles-inline-css' type='text/css'>
+.getcab_inline_1503439230{background-image: url(https://www.parking-aeroport.be/wp-content/uploads/2019/10/home-6-img2.jpg);}
+</style>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.parking-aeroport.be\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"jqueryUi":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.4'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/js/swiper/swiper.jquery.min.js'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/js/magnific/jquery.magnific-popup.min.js?ver=5.2.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var TRX_ADDONS_STORAGE = {"ajax_url":"https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php","ajax_nonce":"03dc359a95","site_url":"https:\/\/www.parking-aeroport.be","vc_edit_mode":"0","popup_engine":"magnific","menu_cache":[],"user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_magnific_loading":"Loading image","msg_magnific_error":"Error loading image","msg_error_like":"Error saving your like! Please, try again later.","msg_field_name_empty":"The name can't be empty","msg_field_email_empty":"Too short (or empty) email address","msg_field_email_not_valid":"Invalid email address","msg_field_text_empty":"The message text can't be empty","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page should be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_email_long":"E-mail address is too long","msg_email_not_valid":"E-mail address is invalid","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!","scroll_to_anchor":"0","update_location_from_anchor":"0","msg_sc_googlemap_not_avail":"Googlemap service is not available","msg_sc_googlemap_geocoder_error":"Error while geocode address"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/trx_addons/js/trx_addons.js'></script>
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/date-time-picker-field/assets/js/vendor/moment/moment.js?ver=5.2.20'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/date-time-picker-field/assets/js/vendor/datetimepicker/jquery.datetimepicker.full.min.js?ver=5.2.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var datepickeropts = {"selector":".datefield","locale":"fr","theme":"default","datepicker":"on","timepicker":"off","inline":"off","placeholder":"on","preventkeyboard":"off","minDate":"off","step":"60","minTime":"00:00","maxTime":"23:59","offset":"0","min_date":"01\/05\/2024","max_date":"","dateformat":"DD\/MM\/YYYY","hourformat":"HH:mm","load":"full","dayOfWeekStart":"1","disabled_days":"","disabled_calendar_days":"","allowed_times":"","sunday_times":"","monday_times":"","tuesday_times":"","wednesday_times":"","thursday_times":"","friday_times":"","saturday_times":"","min_year":"2024","format":"DD\/MM\/YYYY","clean_format":"d\/m\/Y","value":"","timezone":"Europe\/Brussels","utc_offset":"2","now":"01\/05\/2024"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/date-time-picker-field/assets/js/dtpicker.js?ver=5.2.20'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pum_vars = {"version":"1.10.2","pm_dir_url":"https:\/\/www.parking-aeroport.be\/wp-content\/plugins\/popup-maker\/","ajaxurl":"https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php","restapi":"https:\/\/www.parking-aeroport.be\/wp-json\/pum\/v1","rest_nonce":null,"default_theme":"1789","debug_mode":"","disable_tracking":"","home_url":"\/","message_position":"top","core_sub_forms_enabled":"1","popups":[]};
+var ajaxurl = "https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php";
+var pum_sub_vars = {"ajaxurl":"https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-1871":{"disable_on_mobile":false,"disable_on_tablet":false,"custom_height_auto":false,"scrollable_content":false,"position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"close_on_form_submission":false,"close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"triggers":[{"type":"click_open","settings":{"cookie_name":"","extra_selectors":".info-voiturier"}}],"theme_id":"1791","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height":"380px","animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","zindex":"1999999999","close_button_delay":"0","close_on_form_submission_delay":"0","cookies":[],"theme_slug":"enterprise-blue","id":1871,"slug":"sub-popup-voiturier-parking"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.parking-aeroport.be/wp-content/uploads/pum/pum-site-scripts.js?defer&#038;generated=1712501368&#038;ver=1.10.2'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fermer","currentText":"Aujourd\u2019hui","monthNames":["janvier","f\u00e9vrier","mars","avril","mai","juin","juillet","ao\u00fbt","septembre","octobre","novembre","d\u00e9cembre"],"monthNamesShort":["Jan","F\u00e9v","Mar","Avr","Mai","Juin","Juil","Ao\u00fbt","Sep","Oct","Nov","D\u00e9c"],"nextText":"Suivant","prevText":"Pr\u00e9c\u00e9dent","dayNames":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"dayNamesShort":["dim","lun","mar","mer","jeu","ven","sam"],"dayNamesMin":["D","L","M","M","J","V","S"],"dateFormat":"dd\/mm\/yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/jquery/ui/spinner.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpgdprcData = {"ajaxURL":"https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php","ajaxSecurity":"bcb3b509cb","isMultisite":"","path":"\/","blogId":""};
+/* ]]> */
+</script>
+<script type='text/javascript'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var GETCAB_STORAGE = {"ajax_url":"https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php","ajax_nonce":"03dc359a95","site_url":"https:\/\/www.parking-aeroport.be","user_logged_in":"","mobile_layout_width":"959","menu_stretch":"1","menu_animation_in":"fadeInUpSmall","menu_animation_out":"fadeOutDownSmall","background_video":"","use_mediaelements":"1","message_maxlength":"1000","site_scheme":"scheme_default","admin_mode":"","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","strings":{"ajax_error":"Invalid server answer!","error_global":"Error data validation!","name_empty":"The name can&#039;t be empty","name_long":"Too long name","email_empty":"Too short (or empty) email address","email_long":"Too long email address","email_not_valid":"Invalid email address","text_empty":"The message text can&#039;t be empty","text_long":"Too long message text","search_error":"Search error! Try again later.","send_complete":"Send message complete!","send_error":"Transmit failed!"},"menu_hover":"fade","menu_hover_color":"#2b3f16","button_hover":"slide_left","alter_link_color":"#e9a900"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/themes/getcab/js/__scripts.js?ver=5.2.20'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=5.2.20'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-includes/js/wp-embed.min.js?ver=5.2.20'></script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.0.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajaxurl = "https:\/\/www.parking-aeroport.be\/wp-admin\/admin-ajax.php";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.parking-aeroport.be/wp-content/themes/getcab-child/js/parking-reservation.js?ver=0.0.7'></script>
+<a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a>
+</body>
+
+</html>
